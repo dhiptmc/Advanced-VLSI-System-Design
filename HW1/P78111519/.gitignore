@@ -1,0 +1,4 @@
+#ignore .lib .db
+*.lib
+*.db
+sim/SRAM/TS1N16ADFPCLLLVTA512X45M4SWSHOD.sv
