@@ -1,0 +1,14 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+/home/ShanChiYu/AVSD/HW2/P78111519_syn/./sim/top_tb.sv
+-sdf_file
+/home/ShanChiYu/AVSD/HW2/P78111519_syn/./syn/top_syn.sdf
++incdir+/home/ShanChiYu/AVSD/HW2/P78111519_syn/./syn+/home/ShanChiYu/AVSD/HW2/P78111519_syn/./src+/home/ShanChiYu/AVSD/HW2/P78111519_syn/./src/AXI+/home/ShanChiYu/AVSD/HW2/P78111519_syn/./include+/home/ShanChiYu/AVSD/HW2/P78111519_syn/./sim
++define+SYN+prog6+FSDB_ALL
++define+CYCLE=15.0
++define+MAX=300000
++access+r
++nc64bit
++prog_path=/home/ShanChiYu/AVSD/HW2/P78111519_syn/./sim/prog6

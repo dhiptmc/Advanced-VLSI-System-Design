@@ -1,0 +1,51 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+        -sort_by group
+Design : top
+Version: T-2022.03
+Date   : Fri Jan  3 04:36:47 2025
+****************************************
+
+Operating Conditions: BCCOM   Library: fsa0m_a_generic_core_ff1p98vm40c
+Wire Load Model Mode: enclosed
+
+  Startpoint: i_reset_sync/sync_stage1_reg/CK
+              (internal path startpoint clocked by clk)
+  Endpoint: i_reset_sync/sync_stage2_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                enG1000K              fsa0m_a_generic_core_ff1p98vm40c
+  reset_sync         enG5K                 fsa0m_a_generic_core_ff1p98vm40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.2000     0.2000
+  input external delay                                  0.0000     0.2000 r
+  i_reset_sync/sync_stage1_reg/CK (DFFSBN)              0.0000     0.2000 r
+  i_reset_sync/sync_stage1_reg/Q (DFFSBN)               0.1699     0.3699 f
+  i_reset_sync/sync_stage2_reg/D (DFFSBN)               0.0000     0.3699 f
+  data arrival time                                                0.3699
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.2000     0.2000
+  clock uncertainty                                     0.0200     0.2200
+  i_reset_sync/sync_stage2_reg/CK (DFFSBN)              0.0000     0.2200 r
+  library hold time                                    -0.0127     0.2073
+  data required time                                               0.2073
+  --------------------------------------------------------------------------
+  data required time                                               0.2073
+  data arrival time                                               -0.3699
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.1627
+
+
+1

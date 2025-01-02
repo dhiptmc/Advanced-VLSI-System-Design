@@ -1,0 +1,37 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-XLMODE
+./INCA_libs/irun.lnx8664.15.20.nc
+-RUNMODE
+/home/ShanChiYu/AVSD/HW2/P78111519_syn/./sim/top_tb.sv
+-INCDIR
+/home/ShanChiYu/AVSD/HW2/P78111519_syn/./syn
+-INCDIR
+/home/ShanChiYu/AVSD/HW2/P78111519_syn/./src
+-INCDIR
+/home/ShanChiYu/AVSD/HW2/P78111519_syn/./src/AXI
+-INCDIR
+/home/ShanChiYu/AVSD/HW2/P78111519_syn/./include
+-INCDIR
+/home/ShanChiYu/AVSD/HW2/P78111519_syn/./sim
+-DEFINE
+SYN
+-DEFINE
+prog6
+-DEFINE
+FSDB_ALL
+-DEFINE
+CYCLE=15.0
+-DEFINE
+MAX=300000
+-CDSLIB
+./INCA_libs/irun.lnx8664.15.20.nc/cdsrun.lib
+-HDLVAR
+./INCA_libs/irun.lnx8664.15.20.nc/hdlrun.var
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./INCA_libs/irun.lnx8664.15.20.nc/xllibs
+-ALLOWUNBOUND
