@@ -1,0 +1,56 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+        -sort_by group
+Design : top
+Version: T-2022.03
+Date   : Thu Dec 19 14:26:20 2024
+****************************************
+
+Operating Conditions: BCCOM   Library: fsa0m_a_generic_core_ff1p98vm40c
+Wire Load Model Mode: enclosed
+
+  Startpoint: i_CPU/i_EXE_MEM_Reg/MEM_WB_data_sel_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: i_CPU/i_MEM_WB_Reg/WB_WB_data_sel_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                enG1000K              fsa0m_a_generic_core_ff1p98vm40c
+  CPU                enG100K               fsa0m_a_generic_core_ff1p98vm40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.2000     0.2000
+  i_CPU/i_EXE_MEM_Reg/MEM_WB_data_sel_reg/CK (QDFFRBN)
+                                                        0.0000     0.2000 r
+  i_CPU/i_EXE_MEM_Reg/MEM_WB_data_sel_reg/Q (QDFFRBN)   0.1717     0.3717 f
+  i_CPU/i_EXE_MEM_Reg/MEM_WB_data_sel (EXE_MEM_Reg)     0.0000     0.3717 f
+  i_CPU/i_MEM_Stage/MEM_WB_data_sel (MEM_Stage)         0.0000     0.3717 f
+  i_CPU/i_MEM_Stage/U159/O (BUF1CK)                     0.0669     0.4386 f
+  i_CPU/i_MEM_Stage/MEM_WB_WB_data_sel (MEM_Stage)      0.0000     0.4386 f
+  i_CPU/i_MEM_WB_Reg/MEM_WB_WB_data_sel (MEM_WB_Reg)    0.0000     0.4386 f
+  i_CPU/i_MEM_WB_Reg/WB_WB_data_sel_reg/D (QDFFRBN)     0.0000     0.4386 f
+  data arrival time                                                0.4386
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.2000     0.2000
+  clock uncertainty                                     0.0200     0.2200
+  i_CPU/i_MEM_WB_Reg/WB_WB_data_sel_reg/CK (QDFFRBN)    0.0000     0.2200 r
+  library hold time                                    -0.0092     0.2108
+  data required time                                               0.2108
+  --------------------------------------------------------------------------
+  data required time                                               0.2108
+  data arrival time                                               -0.4386
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.2278
+
+
+1
