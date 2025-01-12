@@ -1,0 +1,24 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-INCDIR
+/home/ShanChiYu/AVSD/HW2/P78111519_syn/./syn
+-INCDIR
+/home/ShanChiYu/AVSD/HW2/P78111519_syn/./src
+-INCDIR
+/home/ShanChiYu/AVSD/HW2/P78111519_syn/./src/AXI
+-INCDIR
+/home/ShanChiYu/AVSD/HW2/P78111519_syn/./include
+-INCDIR
+/home/ShanChiYu/AVSD/HW2/P78111519_syn/./sim
+-DEFINE
+SYN
+-DEFINE
+prog6
+-DEFINE
+FSDB_ALL
+-DEFINE
+CYCLE=15.0
+-DEFINE
+MAX=300000

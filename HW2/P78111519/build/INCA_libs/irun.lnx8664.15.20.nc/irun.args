@@ -1,0 +1,13 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+/home/ShanChiYu/AVSD/HW2/P78111519/./sim/top_tb.sv
++incdir+/home/ShanChiYu/AVSD/HW2/P78111519/./src+/home/ShanChiYu/AVSD/HW2/P78111519/./src/AXI+/home/ShanChiYu/AVSD/HW2/P78111519/./include+/home/ShanChiYu/AVSD/HW2/P78111519/./sim
++define+prog6+FSDB_ALL
++define+CYCLE=10.0
++define+MAX=300000
++access+r
++nc64bit
++prog_path=/home/ShanChiYu/AVSD/HW2/P78111519/./sim/prog6
++notimingcheck

@@ -1,0 +1,26 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
++prog_path=/home/ShanChiYu/AVSD/HW2/P78111519/./sim/prog6
++incdir+/home/ShanChiYu/AVSD/HW2/P78111519/./src+/home/ShanChiYu/AVSD/HW2/P78111519/./src/AXI+/home/ShanChiYu/AVSD/HW2/P78111519/./include+/home/ShanChiYu/AVSD/HW2/P78111519/./sim
++define+prog6+FSDB_ALL
++define+CYCLE=10.0
++define+MAX=300000
++access+r
++nc64bit
++notimingcheck
+-ACCESS
++r
+-NOTIMINGCHECKS
+-MESSAGES
+-XLMODE
+./INCA_libs/irun.lnx8664.15.20.nc
+-RUNMODE
+-CDSLIB
+./INCA_libs/irun.lnx8664.15.20.nc/cds.lib
+-HDLVAR
+./INCA_libs/irun.lnx8664.15.20.nc/hdl.var
+-WORK
+worklib
+-HASXLMODE

@@ -1,0 +1,262 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : top
+Version: T-2022.03
+Date   : Fri Jan  3 04:36:47 2025
+****************************************
+
+Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: i_CPU_wrapper/i_CPU/i_EXE_MEM_Reg/MEM_rd_addr_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: i_CPU_wrapper/i_CPU/i_IF_Stage/i_IF_ProgramCounter/PC_out_reg_4_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                enG1000K              fsa0m_a_generic_core_ss1p62v125c
+  CPU                enG100K               fsa0m_a_generic_core_ss1p62v125c
+  ForwardingUnit     enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  EXE_Stage          enG30K                fsa0m_a_generic_core_ss1p62v125c
+  EXE_ALU            enG30K                fsa0m_a_generic_core_ss1p62v125c
+  EXE_ALU_DW_cmp_J36_0
+                     enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  EXE_ALU_DW01_sub_J37_0
+                     enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  CLZ                enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  IF_Stage           enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  IF_ProgramCounter  enG5K                 fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.2000     0.2000
+  i_CPU_wrapper/i_CPU/i_EXE_MEM_Reg/MEM_rd_addr_reg_1_/CK (QDFFRBT)
+                                                        0.0000     0.2000 r
+  i_CPU_wrapper/i_CPU/i_EXE_MEM_Reg/MEM_rd_addr_reg_1_/Q (QDFFRBT)
+                                                        0.5106     0.7106 r
+  i_CPU_wrapper/i_CPU/i_EXE_MEM_Reg/MEM_rd_addr[1] (EXE_MEM_Reg)
+                                                        0.0000     0.7106 r
+  i_CPU_wrapper/i_CPU/i_ForwardingUnit/MEM_rd_addr[1] (ForwardingUnit)
+                                                        0.0000     0.7106 r
+  i_CPU_wrapper/i_CPU/i_ForwardingUnit/U13/O (INV4)     0.0475     0.7581 f
+  i_CPU_wrapper/i_CPU/i_ForwardingUnit/U24/O (XNR2H)    0.1735     0.9316 f
+  i_CPU_wrapper/i_CPU/i_ForwardingUnit/U39/O (NR3HP)    0.1870     1.1186 r
+  i_CPU_wrapper/i_CPU/i_ForwardingUnit/U54/O (OR3B2)    0.1479     1.2665 f
+  i_CPU_wrapper/i_CPU/i_ForwardingUnit/U41/O (INV2)     0.1022     1.3687 r
+  i_CPU_wrapper/i_CPU/i_ForwardingUnit/U25/O (MUXB2)    0.0934     1.4621 f
+  i_CPU_wrapper/i_CPU/i_ForwardingUnit/U14/O (AN4P)     0.2956     1.7577 f
+  i_CPU_wrapper/i_CPU/i_ForwardingUnit/ForwardA[0] (ForwardingUnit)
+                                                        0.0000     1.7577 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/ForwardA[0] (EXE_Stage)
+                                                        0.0000     1.7577 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/U11/O (INV3)          0.0988     1.8565 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/U170/O (AN2T)         0.2313     2.0878 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/U166/O (BUF12CK)      0.2298     2.3176 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/U36/O (AO222)         0.4024     2.7200 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/rs1[0] (EXE_ALU)
+                                                        0.0000     2.7200 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U238/O (BUF8CK)
+                                                        0.1879     2.9079 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U47/O (INV12CK)
+                                                        0.0703     2.9782 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U48/O (INV4CK)
+                                                        0.0414     3.0196 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/gte_119/A[0] (EXE_ALU_DW_cmp_J36_0)
+                                                        0.0000     3.0196 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/gte_119/U187/O (INV1S)
+                                                        0.1134     3.1330 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/gte_119/U186/O (NR2)
+                                                        0.1472     3.2802 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/gte_119/U184/O (OR2)
+                                                        0.2117     3.4920 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/gte_119/U207/O (ND2)
+                                                        0.1167     3.6086 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/gte_119/U161/O (ND2P)
+                                                        0.1419     3.7505 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/gte_119/U158/O (AOI12HP)
+                                                        0.1072     3.8577 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/gte_119/U222/O (OAI12HP)
+                                                        0.1801     4.0378 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/gte_119/U163/O (AOI12HP)
+                                                        0.1184     4.1563 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/gte_119/U266/O (OAI12HT)
+                                                        0.2069     4.3632 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/gte_119/GE_LT_GT_LE (EXE_ALU_DW_cmp_J36_0)
+                                                        0.0000     4.3632 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U97/O (INV12)
+                                                        0.0821     4.4454 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U169/O (INV12CK)
+                                                        0.0804     4.5257 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U452/O (MUX2T)
+                                                        0.3158     4.8415 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U451/O (INV8CK)
+                                                        0.1312     4.9727 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/sub_140/A[0] (EXE_ALU_DW01_sub_J7_0)
+                                                        0.0000     4.9727 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/sub_140/U66/O (XOR2HP)
+                                                        0.2013     5.1739 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/sub_140/DIFF[0] (EXE_ALU_DW01_sub_J7_0)
+                                                        0.0000     5.1739 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U629/O (AN2)
+                                                        0.3334     5.5073 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U1492/O (BUF12CK)
+                                                        0.2166     5.7239 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U172/O (AOI22S)
+                                                        0.3040     6.0280 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U616/O (ND2T)
+                                                        0.1413     6.1692 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U614/O (AN2T)
+                                                        0.2616     6.4308 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U507/O (NR2T)
+                                                        0.1288     6.5596 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U636/O (OAI112HP)
+                                                        0.1881     6.7477 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U409/O (ND2F)
+                                                        0.1147     6.8624 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U484/O (ND2T)
+                                                        0.0826     6.9451 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U952/O (INV4)
+                                                        0.0715     7.0166 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U1155/O (AN2T)
+                                                        0.2464     7.2630 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/sub_229/B[19] (EXE_ALU_DW01_sub_J37_0)
+                                                        0.0000     7.2630 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/sub_229/U522/O (INV4)
+                                                        0.0543     7.3173 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/sub_229/U630/O (OR2T)
+                                                        0.1928     7.5101 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/sub_229/U421/O (INV4)
+                                                        0.0852     7.5953 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/sub_229/U473/O (OAI12HT)
+                                                        0.0734     7.6687 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/sub_229/U420/O (INV4CK)
+                                                        0.0877     7.7564 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/sub_229/U565/O (OAI12HT)
+                                                        0.0814     7.8378 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/sub_229/U587/O (AOI12HT)
+                                                        0.1631     8.0009 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/sub_229/U595/O (BUF6)
+                                                        0.1874     8.1883 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/sub_229/U546/O (OAI12HP)
+                                                        0.0942     8.2825 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/sub_229/U591/O (AOI12HT)
+                                                        0.1581     8.4406 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/sub_229/U694/O (XOR2HP)
+                                                        0.1544     8.5951 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/sub_229/DIFF[26] (EXE_ALU_DW01_sub_J37_0)
+                                                        0.0000     8.5951 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/i_CLZ/number[26] (CLZ)
+                                                        0.0000     8.5951 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/i_CLZ/U45/O (INV4)
+                                                        0.0481     8.6432 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/i_CLZ/U84/O (AN4B1)
+                                                        0.2611     8.9043 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/i_CLZ/U81/O (ND2P)
+                                                        0.1324     9.0367 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/i_CLZ/U46/O (OR3B2)
+                                                        0.2120     9.2487 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/i_CLZ/U18/O (BUF6)
+                                                        0.1895     9.4382 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/i_CLZ/U64/O (INV2)
+                                                        0.1027     9.5409 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/i_CLZ/U79/O (ND2P)
+                                                        0.1996     9.7405 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/i_CLZ/U12/O (INV6)
+                                                        0.0924     9.8329 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/i_CLZ/U76/O (AOI22H)
+                                                        0.2743    10.1072 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/i_CLZ/U33/O (ND2T)
+                                                        0.1011    10.2083 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/i_CLZ/U57/O (INV4)
+                                                        0.0907    10.2991 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/i_CLZ/U59/O (ND2T)
+                                                        0.0747    10.3738 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/i_CLZ/U31/O (AN4B1)
+                                                        0.1473    10.5211 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/i_CLZ/U29/O (AN2)
+                                                        0.2816    10.8027 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/i_CLZ/U23/O (NR2P)
+                                                        0.0982    10.9009 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/i_CLZ/U80/O (AN2T)
+                                                        0.2276    11.1285 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/i_CLZ/CLZ_result[1] (CLZ)
+                                                        0.0000    11.1285 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U1481/O (BUF12CK)
+                                                        0.1744    11.3028 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U1457/O (INV12)
+                                                        0.1004    11.4032 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U657/O (AN2B1)
+                                                        0.2431    11.6463 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U19/O (BUF6)
+                                                        0.2277    11.8740 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U218/O (AOI22H)
+                                                        0.1016    11.9756 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U122/O (ND2P)
+                                                        0.1696    12.1452 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U931/O (MUX2T)
+                                                        0.3261    12.4713 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U488/OB (MXL2H)
+                                                        0.1299    12.6012 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U415/O (ND2P)
+                                                        0.1623    12.7635 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U182/O (ND2P)
+                                                        0.0866    12.8500 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U130/O (AOI112H)
+                                                        0.2465    13.0965 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U1065/O (OA12P)
+                                                        0.2923    13.3889 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U1000/O (NR2F)
+                                                        0.0963    13.4852 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U775/O (INV12CK)
+                                                        0.0869    13.5721 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U776/O (INV6)
+                                                        0.0916    13.6637 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U249/O (ND2P)
+                                                        0.0830    13.7466 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U250/O (ND2S)
+                                                        0.1023    13.8489 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U360/O (OR3B1)
+                                                        0.2847    14.1336 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U546/O (NR2)
+                                                        0.1648    14.2984 r
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/U545/O (ND2)
+                                                        0.1649    14.4633 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/i_EXE_ALU/ALU_out[4] (EXE_ALU)
+                                                        0.0000    14.4633 f
+  i_CPU_wrapper/i_CPU/i_EXE_Stage/PC_imm_rs1[4] (EXE_Stage)
+                                                        0.0000    14.4633 f
+  i_CPU_wrapper/i_CPU/i_IF_Stage/PC_imm_rs1[4] (IF_Stage)
+                                                        0.0000    14.4633 f
+  i_CPU_wrapper/i_CPU/i_IF_Stage/U101/O (AO222S)        0.3191    14.7824 f
+  i_CPU_wrapper/i_CPU/i_IF_Stage/i_IF_ProgramCounter/PC_in[4] (IF_ProgramCounter)
+                                                        0.0000    14.7824 f
+  i_CPU_wrapper/i_CPU/i_IF_Stage/i_IF_ProgramCounter/U26/O (MUX2)
+                                                        0.2936    15.0760 f
+  i_CPU_wrapper/i_CPU/i_IF_Stage/i_IF_ProgramCounter/PC_out_reg_4_/D (QDFFRBN)
+                                                        0.0000    15.0760 f
+  data arrival time                                               15.0760
+
+  clock clk (rise edge)                                15.0000    15.0000
+  clock network delay (ideal)                           0.2000    15.2000
+  clock uncertainty                                    -0.0200    15.1800
+  i_CPU_wrapper/i_CPU/i_IF_Stage/i_IF_ProgramCounter/PC_out_reg_4_/CK (QDFFRBN)
+                                                        0.0000    15.1800 r
+  library setup time                                   -0.1039    15.0761
+  data required time                                              15.0761
+  --------------------------------------------------------------------------
+  data required time                                              15.0761
+  data arrival time                                              -15.0760
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0001
+
+
+1
