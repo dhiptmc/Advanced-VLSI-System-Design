@@ -2,4 +2,4 @@
 (Graduate Level) Fall 2024
 
 HW1
-![image](https://github.com/user-attachments/assets/37eee799-b665-4e4c-9bc2-6bc5344677e3)
+![image](https://github.com/user-attachments/assets/9347ca92-ae0d-4f93-b0cd-f7fe2c9daf03)
