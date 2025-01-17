@@ -1,0 +1,180 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : top
+Version: T-2022.03
+Date   : Sat Jan 18 05:33:43 2025
+****************************************
+
+Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: DM1/i_SRAM (rising edge-triggered flip-flop clocked by clk')
+  Endpoint: i_CPU_wrapper/i_CPU/i_MEM_WB_Reg/WB_DM_rd_data_reg_16_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SRAM_wrapper_0     enG500K               fsa0m_a_generic_core_ss1p62v125c
+  top                enG1000K              fsa0m_a_generic_core_ss1p62v125c
+  R                  enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  DM_Master          enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  CPU_wrapper        enG100K               fsa0m_a_generic_core_ss1p62v125c
+  MEM_Stage          enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  CPU                enG100K               fsa0m_a_generic_core_ss1p62v125c
+  MEM_WB_Reg         enG5K                 fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk' (rise edge)                                7.5000     7.5000
+  clock network delay (ideal)                           1.0000     8.5000
+  DM1/i_SRAM/CK (SRAM)                                  0.0000     8.5000 r
+  DM1/i_SRAM/DO7 (SRAM)                                 5.7063    14.2063 f
+  DM1/U96/O (INV12CK)                                   0.1006    14.3069 r
+  DM1/U95/OB (MXL2HF)                                   0.1315    14.4384 f
+  DM1/S_R_RDATA[7] (SRAM_wrapper_0)                     0.0000    14.4384 f
+  i_AXI/S2_R_RDATA[7] (AXI)                             0.0000    14.4384 f
+  i_AXI/i_R/S2_RDATA[7] (R)                             0.0000    14.4384 f
+  i_AXI/i_R/U155/O (AOI22HT)                            0.2446    14.6830 r
+  i_AXI/i_R/U154/O (ND2F)                               0.2041    14.8871 f
+  i_AXI/i_R/M1_RDATA[7] (R)                             0.0000    14.8871 f
+  i_AXI/M1_R_RDATA[7] (AXI)                             0.0000    14.8871 f
+  i_CPU_wrapper/M1_R_RDATA[7] (CPU_wrapper)             0.0000    14.8871 f
+  i_CPU_wrapper/M1/RDATA_M[7] (DM_Master)               0.0000    14.8871 f
+  i_CPU_wrapper/M1/U131/OB (MXL2HT)                     0.2005    15.0876 r
+  i_CPU_wrapper/M1/U130/O (INV12CK)                     0.0884    15.1760 f
+  i_CPU_wrapper/M1/data_out[7] (DM_Master)              0.0000    15.1760 f
+  i_CPU_wrapper/i_CPU/Data_in[7] (CPU)                  0.0000    15.1760 f
+  i_CPU_wrapper/i_CPU/i_MEM_Stage/Data_in[7] (MEM_Stage)
+                                                        0.0000    15.1760 f
+  i_CPU_wrapper/i_CPU/i_MEM_Stage/U40/O (INV12)         0.0678    15.2438 r
+  i_CPU_wrapper/i_CPU/i_MEM_Stage/U68/OB (MXL2HF)       0.0994    15.3432 f
+  i_CPU_wrapper/i_CPU/i_MEM_Stage/U14/OB (MXL2HT)       0.1770    15.5201 r
+  i_CPU_wrapper/i_CPU/i_MEM_Stage/U51/O (OAI12HT)       0.1046    15.6247 f
+  i_CPU_wrapper/i_CPU/i_MEM_Stage/U11/O (INV3)          0.1357    15.7605 r
+  i_CPU_wrapper/i_CPU/i_MEM_Stage/U109/O (OAI12H)       0.1150    15.8755 f
+  i_CPU_wrapper/i_CPU/i_MEM_Stage/DM_rd_data[16] (MEM_Stage)
+                                                        0.0000    15.8755 f
+  i_CPU_wrapper/i_CPU/i_MEM_WB_Reg/DM_rd_data[16] (MEM_WB_Reg)
+                                                        0.0000    15.8755 f
+  i_CPU_wrapper/i_CPU/i_MEM_WB_Reg/U54/O (MOAI1HP)      0.2139    16.0894 f
+  i_CPU_wrapper/i_CPU/i_MEM_WB_Reg/WB_DM_rd_data_reg_16_/D (DFFRBN)
+                                                        0.0000    16.0894 f
+  data arrival time                                               16.0894
+
+  clock clk (rise edge)                                15.0000    15.0000
+  clock network delay (ideal)                           1.0000    16.0000
+  clock uncertainty                                    -0.1000    15.9000
+  i_CPU_wrapper/i_CPU/i_MEM_WB_Reg/WB_DM_rd_data_reg_16_/CK (DFFRBN)
+                                                        0.0000    15.9000 r
+  library setup time                                   -0.1097    15.7903
+  data required time                                              15.7903
+  --------------------------------------------------------------------------
+  data required time                                              15.7903
+  data arrival time                                              -16.0894
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                -0.2990
+
+
+  Startpoint: WDT/i_WDT/WDT_cnt_reg_0_
+              (rising edge-triggered flip-flop clocked by clk2)
+  Endpoint: WDT/i_WDT/WDT_cnt_reg_31_
+            (rising edge-triggered flip-flop clocked by clk2)
+  Path Group: clk2
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                enG1000K              fsa0m_a_generic_core_ss1p62v125c
+  WDT                enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  WDT_DW01_dec_0     enG5K                 fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk2 (rise edge)                                0.0000     0.0000
+  clock network delay (ideal)                           1.0000     1.0000
+  WDT/i_WDT/WDT_cnt_reg_0_/CK (QDFFRBN)                 0.0000     1.0000 r
+  WDT/i_WDT/WDT_cnt_reg_0_/Q (QDFFRBN)                  0.4470     1.4470 f
+  WDT/i_WDT/sub_185/A[0] (WDT_DW01_dec_0)               0.0000     1.4470 f
+  WDT/i_WDT/sub_185/U88/O (NR2)                         0.2065     1.6535 r
+  WDT/i_WDT/sub_185/U3/O (INV1S)                        0.1641     1.8177 f
+  WDT/i_WDT/sub_185/U87/O (NR2)                         0.2223     2.0399 r
+  WDT/i_WDT/sub_185/U17/O (INV1S)                       0.1640     2.2039 f
+  WDT/i_WDT/sub_185/U86/O (NR2)                         0.2222     2.4262 r
+  WDT/i_WDT/sub_185/U19/O (INV1S)                       0.1640     2.5901 f
+  WDT/i_WDT/sub_185/U85/O (NR2)                         0.2222     2.8124 r
+  WDT/i_WDT/sub_185/U21/O (INV1S)                       0.1640     2.9763 f
+  WDT/i_WDT/sub_185/U84/O (NR2)                         0.2222     3.1986 r
+  WDT/i_WDT/sub_185/U8/O (INV1S)                        0.1640     3.3625 f
+  WDT/i_WDT/sub_185/U83/O (NR2)                         0.2222     3.5848 r
+  WDT/i_WDT/sub_185/U10/O (INV1S)                       0.1640     3.7487 f
+  WDT/i_WDT/sub_185/U82/O (NR2)                         0.2222     3.9710 r
+  WDT/i_WDT/sub_185/U6/O (INV1S)                        0.1640     4.1349 f
+  WDT/i_WDT/sub_185/U81/O (NR2)                         0.2222     4.3572 r
+  WDT/i_WDT/sub_185/U5/O (INV1S)                        0.1640     4.5211 f
+  WDT/i_WDT/sub_185/U80/O (NR2)                         0.3042     4.8254 r
+  WDT/i_WDT/sub_185/U79/O (ND2)                         0.2232     5.0485 f
+  WDT/i_WDT/sub_185/U77/O (NR2)                         0.2373     5.2858 r
+  WDT/i_WDT/sub_185/U1/O (INV1S)                        0.1661     5.4519 f
+  WDT/i_WDT/sub_185/U75/O (NR2)                         0.2227     5.6746 r
+  WDT/i_WDT/sub_185/U9/O (INV1S)                        0.1640     5.8386 f
+  WDT/i_WDT/sub_185/U73/O (NR2)                         0.2223     6.0609 r
+  WDT/i_WDT/sub_185/U7/O (INV1S)                        0.1640     6.2248 f
+  WDT/i_WDT/sub_185/U71/O (NR2)                         0.2222     6.4471 r
+  WDT/i_WDT/sub_185/U4/O (INV1S)                        0.1640     6.6110 f
+  WDT/i_WDT/sub_185/U69/O (NR2)                         0.2222     6.8333 r
+  WDT/i_WDT/sub_185/U2/O (INV1S)                        0.1640     6.9973 f
+  WDT/i_WDT/sub_185/U67/O (NR2)                         0.2222     7.2195 r
+  WDT/i_WDT/sub_185/U11/O (INV1S)                       0.1640     7.3835 f
+  WDT/i_WDT/sub_185/U65/O (NR2)                         0.2222     7.6057 r
+  WDT/i_WDT/sub_185/U12/O (INV1S)                       0.1640     7.7697 f
+  WDT/i_WDT/sub_185/U63/O (NR2)                         0.2222     7.9919 r
+  WDT/i_WDT/sub_185/U13/O (INV1S)                       0.1640     8.1559 f
+  WDT/i_WDT/sub_185/U61/O (NR2)                         0.2222     8.3781 r
+  WDT/i_WDT/sub_185/U14/O (INV1S)                       0.1640     8.5421 f
+  WDT/i_WDT/sub_185/U58/O (NR2)                         0.2222     8.7643 r
+  WDT/i_WDT/sub_185/U15/O (INV1S)                       0.1640     8.9283 f
+  WDT/i_WDT/sub_185/U56/O (NR2)                         0.2222     9.1505 r
+  WDT/i_WDT/sub_185/U16/O (INV1S)                       0.1640     9.3145 f
+  WDT/i_WDT/sub_185/U54/O (NR2)                         0.2222     9.5367 r
+  WDT/i_WDT/sub_185/U18/O (INV1S)                       0.1640     9.7007 f
+  WDT/i_WDT/sub_185/U52/O (NR2)                         0.2222     9.9229 r
+  WDT/i_WDT/sub_185/U20/O (INV1S)                       0.1640    10.0869 f
+  WDT/i_WDT/sub_185/U50/O (NR2)                         0.2222    10.3092 r
+  WDT/i_WDT/sub_185/U22/O (INV1S)                       0.1640    10.4731 f
+  WDT/i_WDT/sub_185/U48/O (NR2)                         0.2222    10.6954 r
+  WDT/i_WDT/sub_185/U23/O (INV1S)                       0.1640    10.8593 f
+  WDT/i_WDT/sub_185/U46/O (NR2)                         0.2222    11.0816 r
+  WDT/i_WDT/sub_185/U24/O (INV1S)                       0.1640    11.2455 f
+  WDT/i_WDT/sub_185/U44/O (NR2)                         0.2222    11.4678 r
+  WDT/i_WDT/sub_185/U25/O (INV1S)                       0.1640    11.6317 f
+  WDT/i_WDT/sub_185/U42/O (NR2)                         0.2222    11.8540 r
+  WDT/i_WDT/sub_185/U26/O (INV1S)                       0.1640    12.0179 f
+  WDT/i_WDT/sub_185/U40/O (NR2)                         0.3136    12.3316 r
+  WDT/i_WDT/sub_185/U36/O (AN2B1S)                      0.2424    12.5740 r
+  WDT/i_WDT/sub_185/U35/O (XOR2HS)                      0.1585    12.7324 r
+  WDT/i_WDT/sub_185/SUM[31] (WDT_DW01_dec_0)            0.0000    12.7324 r
+  WDT/i_WDT/U117/O (AO222)                              0.4108    13.1432 r
+  WDT/i_WDT/WDT_cnt_reg_31_/D (QDFFRBN)                 0.0000    13.1432 r
+  data arrival time                                               13.1432
+
+  clock clk2 (rise edge)                              100.0000   100.0000
+  clock network delay (ideal)                           1.0000   101.0000
+  clock uncertainty                                    -0.1000   100.9000
+  WDT/i_WDT/WDT_cnt_reg_31_/CK (QDFFRBN)                0.0000   100.9000 r
+  library setup time                                   -0.1671   100.7329
+  data required time                                             100.7329
+  --------------------------------------------------------------------------
+  data required time                                             100.7329
+  data arrival time                                              -13.1432
+  --------------------------------------------------------------------------
+  slack (MET)                                                     87.5897
+
+
+1

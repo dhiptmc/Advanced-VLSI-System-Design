@@ -1,0 +1,84 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+        -sort_by group
+Design : top
+Version: T-2022.03
+Date   : Sat Jan 18 05:33:43 2025
+****************************************
+
+Operating Conditions: BCCOM   Library: fsa0m_a_generic_core_ff1p98vm40c
+Wire Load Model Mode: enclosed
+
+  Startpoint: WDT/WTO_clk1_stage1_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: WDT/WTO_clk1_stage2_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                enG1000K              fsa0m_a_generic_core_ff1p98vm40c
+  WDT_wrapper        enG5K                 fsa0m_a_generic_core_ff1p98vm40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           1.0000     1.0000
+  WDT/WTO_clk1_stage1_reg/CK (QDFFRBN)                  0.0000     1.0000 r
+  WDT/WTO_clk1_stage1_reg/Q (QDFFRBN)                   0.1547     1.1547 f
+  WDT/WTO_clk1_stage2_reg/D (QDFFRBN)                   0.0000     1.1547 f
+  data arrival time                                                1.1547
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           1.0000     1.0000
+  clock uncertainty                                     0.1000     1.1000
+  WDT/WTO_clk1_stage2_reg/CK (QDFFRBN)                  0.0000     1.1000 r
+  library hold time                                    -0.0069     1.0931
+  data required time                                               1.0931
+  --------------------------------------------------------------------------
+  data required time                                               1.0931
+  data arrival time                                               -1.1547
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0616
+
+
+  Startpoint: WDT/i_WDT/WDEN_clk2_reg_stage1_reg
+              (rising edge-triggered flip-flop clocked by clk2)
+  Endpoint: WDT/i_WDT/WDEN_clk2_reg_stage2_reg
+            (rising edge-triggered flip-flop clocked by clk2)
+  Path Group: clk2
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                enG1000K              fsa0m_a_generic_core_ff1p98vm40c
+  WDT                enG5K                 fsa0m_a_generic_core_ff1p98vm40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk2 (rise edge)                                0.0000     0.0000
+  clock network delay (ideal)                           1.0000     1.0000
+  WDT/i_WDT/WDEN_clk2_reg_stage1_reg/CK (QDFFRBN)       0.0000     1.0000 r
+  WDT/i_WDT/WDEN_clk2_reg_stage1_reg/Q (QDFFRBN)        0.1547     1.1547 f
+  WDT/i_WDT/WDEN_clk2_reg_stage2_reg/D (QDFFRBN)        0.0000     1.1547 f
+  data arrival time                                                1.1547
+
+  clock clk2 (rise edge)                                0.0000     0.0000
+  clock network delay (ideal)                           1.0000     1.0000
+  clock uncertainty                                     0.1000     1.1000
+  WDT/i_WDT/WDEN_clk2_reg_stage2_reg/CK (QDFFRBN)       0.0000     1.1000 r
+  library hold time                                    -0.0069     1.0931
+  data required time                                               1.0931
+  --------------------------------------------------------------------------
+  data required time                                               1.0931
+  data arrival time                                               -1.1547
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0616
+
+
+1
